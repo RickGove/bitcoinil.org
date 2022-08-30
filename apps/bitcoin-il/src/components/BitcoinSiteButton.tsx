@@ -43,9 +43,9 @@ export default function SiteButton({
 // ////////////////////////////
 //
 //   Helper Function
-function LinkFromProps(props: {
+function LinkFromProps<T>(props: {
   makeATag: any
-  children: any
+  children: (values: T) => JSX.Element
   buttonLinkId?: string
 }) {
   const intl = useIntl()
