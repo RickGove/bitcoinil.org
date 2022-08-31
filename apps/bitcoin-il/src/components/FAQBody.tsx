@@ -2,9 +2,10 @@ import * as React from 'react'
 import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
 
-import { FAQ, useFAQs } from '../data/FAQData'
+import { useFAQs } from '../data/FAQData'
 import { FAQBodyProps } from '../utils/interfaces'
 import StickyTOC from './StickyTOC'
+
 // import TableOfContentsScrollTracked from './TableOfContentsScrollTracked'
 
 const FAQBody: React.FC<FAQBodyProps> = ({}) => {
