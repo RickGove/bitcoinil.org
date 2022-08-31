@@ -32,7 +32,9 @@ const LanguageSelect: React.FC<LanguageSelectProps> = ({}) => {
     })
   }, [])
 
-  const onClick = (e: any) => {
+  function onClick(e: any) {
+    console.log(e)
+
     if (languageState.language === e.key) return null
     setCurrent(e.key)
     setLanugageState({ language: e.key })

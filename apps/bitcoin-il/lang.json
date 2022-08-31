@@ -1,17 +1,22 @@
 {
-  "3et7tk": {
-    "defaultMessage": "walletC.releases"
-  },
-  "GRrEYG": {
-    "defaultMessage": "Releases",
-    "description": "releases"
-  },
   "GettingStarted.howToUse": {
     "defaultMessage": "How To Use BitCoin IL",
     "description": "id"
   },
+  "LNocJa": {
+    "defaultMessage": "Forums"
+  },
   "YBLyfy": {
     "defaultMessage": "https://some.url.com/"
+  },
+  "bitcoinil-core.download": {
+    "defaultMessage": "Download BitcoinIL Core"
+  },
+  "bitcoinil-core.download-url": {
+    "defaultMessage": "https://guides.bitcoinil.org/"
+  },
+  "bitcoinil-core.version": {
+    "defaultMessage": "BitcoinIL Core v0.21.0"
   },
   "bitil-white-paper.intro": {
     "defaultMessage": "Bitcoin Israel's whitepaper is a low-technicalities document focusing on the usability and adoption of Bitcoin and described as a scaling attempt to the Bitcoin Core Consensus",
@@ -189,18 +194,6 @@
     "defaultMessage": "Twitter - MUST ADD PROPER ADDRESS",
     "description": "Description"
   },
-  "community.visit": {
-    "defaultMessage": "Visit the",
-    "description": "visit"
-  },
-  "community.visit.link": {
-    "defaultMessage": "Community portal",
-    "description": "visit.link"
-  },
-  "community.visit.post-link": {
-    "defaultMessage": "on the wiki.",
-    "description": "visit.post-link"
-  },
   "communityCards.conversation.title": {
     "defaultMessage": "IRC Chat",
     "description": "individuals card international title"
@@ -257,9 +250,12 @@
     "defaultMessage": "Get Help",
     "description": "get-help"
   },
-  "core.shortcuts.mainTitle": {
-    "defaultMessage": "Bitcoin Core is programmed to decide which block chain contains valid transactions. The users of Bitcoin Core only accept transactions for that block chain, making it the Bitcoin block chain that everyone else wants to use. For the latest developments related to Bitcoin Core, be sure to visit the project’s official website.",
+  "core.shortcuts.main.description": {
+    "defaultMessage": "Bitcoin IL Core is programmed to decide which block chain contains valid transactions. The users of Bitcoin Core only accept transactions for that block chain, making it the Bitcoin block chain that everyone else wants to use. For the latest developments related to Bitcoin Core, be sure to visit the project’s official website.",
     "description": "mainTitle"
+  },
+  "core.shortcuts.main.title": {
+    "defaultMessage": "Bitcoin IL Core"
   },
   "core.shortcuts.releases.subtitle": {
     "defaultMessage": "For more News, see the complete list",
@@ -306,13 +302,17 @@
     "defaultMessage": "🇻🇳 Vietnam",
     "description": "asia.vietnam"
   },
+  "exchanges.developers.heading": {
+    "defaultMessage": "All of the resources and information regarding bitcoin development as accessible on the original developer.bitcoin.org website and is highly recommended resource if you want to learn how to interact with the Bitcoin or Bitcoin Israel blockchain, construct valid transaction, and create compatible wallets and other software.",
+    "description": "developers.heading"
+  },
   "exchanges.getting-stared-label": {
     "defaultMessage": "Get Started with BitCoin Il",
     "description": "getting-stared-label"
   },
-  "exchanges.non-profit.title": {
-    "defaultMessage": "Non-profit Organizations",
-    "description": "non-profit.title"
+  "exchanges.id": {
+    "defaultMessage": "Get Started With BitCoin Israel",
+    "description": "id"
   },
   "exchanges.p2p": {
     "defaultMessage": "Peer-to-Peer (P2P)",
@@ -337,10 +337,6 @@
   "faq.legal": {
     "defaultMessage": "Legal",
     "description": "legal"
-  },
-  "faq.mobile.burger-menu-title": {
-    "defaultMessage": "See All",
-    "description": "mobile.burger-menu-title"
   },
   "faq.what-is.body": {
     "defaultMessage": "Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen. From a user perspective, Bitcoin is pretty much like cash for the Internet. Bitcoin can also be seen as the most prominent triple entry bookkeeping system in existence.",
@@ -557,6 +553,9 @@
   "individualCards.simple.title": {
     "defaultMessage": "Works everywhere, anytime",
     "description": "individuals card simple title"
+  },
+  "innovation.why-clone.title": {
+    "defaultMessage": "Why Clone?"
   },
   "innovationCards.accessibility.text": {
     "defaultMessage": "With Bitcoin, all payments in the world can be fully interoperable. Bitcoin allows any bank, business or individual to securely send and receive payments anywhere at any time, with or without a bank account. Bitcoin is available in a large number of countries that still remain out of reach for most payment systems due to their own limitations. Bitcoin increases global access to commerce and it can help international trades to flourish.",
@@ -803,7 +802,7 @@
     "description": "development.title"
   },
   "mainMenuItem.devleopers.subtitle": {
-    "defaultMessage": "Bitcoin for Developers",
+    "defaultMessage": "Bitcoin Israel is based on the same infrastructure and code as the original Bitcoin Core",
     "description": "devleopers.subtitle"
   },
   "mainMenuItem.documentation.subtitle": {
@@ -965,6 +964,18 @@
   "page.spend.title.menu": {
     "defaultMessage": "Spend BitCoin il",
     "description": "Spend title"
+  },
+  "page.translations-admin.title.menu": {
+    "defaultMessage": "Translations",
+    "description": "Translations Header"
+  },
+  "page.translations-bitil.subtitle": {
+    "defaultMessage": "translations BitcoinIL",
+    "description": "Choose Wallet"
+  },
+  "page.translations.title": {
+    "defaultMessage": "translations BitcoinIL",
+    "description": "Choose Wallet"
   },
   "page.you-should-know.subtitle": {
     "defaultMessage": "If you're getting started with Bitcoin, there are a few things you should know. Bitcoin lets you exchange money and transact in a different way than you normally do. As such, you should take time to inform yourself before using Bitcoin for any serious transaction. Bitcoin should be treated with the same care as your regular wallet, or even more in some cases!",
@@ -1404,10 +1415,6 @@
     "defaultMessage": "Cilia Wallet",
     "description": "'Cilia Wallet'"
   },
-  "walletchoice.AppStore": {
-    "defaultMessage": "AppStore",
-    "description": "AppStore"
-  },
   "walletchoice.BitilWallet Android": {
     "defaultMessage": "BitilWallet Android",
     "description": "BitilWallet Android"
@@ -1415,14 +1422,6 @@
   "walletchoice.BitilWalletiPhone": {
     "defaultMessage": "BitilWallet iPhone",
     "description": "BitilWallet iPhone"
-  },
-  "walletchoice.GitHubRepo": {
-    "defaultMessage": "GitHub Repo",
-    "description": "GitHubRepo"
-  },
-  "walletchoice.web": {
-    "defaultMessage": "Website",
-    "description": "web"
   },
   "white-paper.do-you-want-translate": {
     "defaultMessage": "Do you want to translate the paper into your language? Visit the Bitcoin white paper repository on GitHub for instructions and open an issue if you have any questions.",

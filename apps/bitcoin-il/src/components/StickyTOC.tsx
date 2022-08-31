@@ -87,28 +87,32 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
     // Check for duplicate keys in items
     const keys: string[] = []
 
-    items.forEach((item: any) => {
-      if (keys.includes(item.key)) {
-        console.error(
-          `TableOfContentsScrollTracked found duplicate key: ${item.key}`
-        )
-        // setIsError(true)
-      } else {
-        keys.push(item.key)
+    items.forEach(
+      // : any is hard to fix here
+      (item: any) => {
+        // console.log(item)
+        if (keys.includes(item.key)) {
+          console.error(
+            `TableOfContentsScrollTracked found duplicate key: ${item.key}`
+          )
+          // setIsError(true)
+        } else {
+          keys.push(item.key)
+        }
+        if (item.subHeadings) {
+          item.subHeadings.forEach((subHeading: any) => {
+            if (keys.includes(subHeading.key)) {
+              console.error(
+                `TableOfContentsScrollTracked found duplicate key: ${subHeading.key}`
+              )
+              // setIsError(true)
+            } else {
+              keys.push(subHeading.key)
+            }
+          })
+        }
       }
-      if (item.subHeadings) {
-        item.subHeadings.forEach((subHeading: any) => {
-          if (keys.includes(subHeading.key)) {
-            console.error(
-              `TableOfContentsScrollTracked found duplicate key: ${subHeading.key}`
-            )
-            // setIsError(true)
-          } else {
-            keys.push(subHeading.key)
-          }
-        })
-      }
-    })
+    )
   }, [categories])
 
   React.useEffect(() => {

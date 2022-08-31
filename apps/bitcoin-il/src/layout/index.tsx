@@ -27,34 +27,34 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
 
   // const [initLoadDone, setInitLoadDone] = React.useState(false)
 
-  const [initLoadDone, setInitLoadDone] = React.useState(false)
+  // const [initLoadDone, setInitLoadDone] = React.useState(true)
 
-  document.onreadystatechange = () => {
-    setInitLoadDone(document.readyState === 'complete')
-  }
+  // document.onreadystatechange = () => {
+  //   setInitLoadDone(document.readyState === 'complete')
+  // }
 
-  React.useEffect(() => {
-    document.body.style.opacity = '0'
-    window.setTimeout(() => {
-      document.body.style.opacity = '1'
-    }, 1100)
+  // React.useEffect(() => {
+  //   document.body.style.opacity = '0'
+  //   window.setTimeout(() => {
+  //     document.body.style.opacity = '1'
+  //   }, 1100)
 
-    return () => {
-      document.body.style.opacity = '0'
-    }
-  }, [])
+  //   return () => {
+  //     document.body.style.opacity = '0'
+  //   }
+  // }, [])
 
-  React.useEffect(() => {
-    window.addEventListener('beforeunload', fadeOut)
-    return () => {
-      window.removeEventListener('beforeunload', fadeOut)
-    }
-  }, [])
+  // React.useEffect(() => {
+  //   window.addEventListener('beforeunload', fadeOut)
+  //   return () => {
+  //     window.removeEventListener('beforeunload', fadeOut)
+  //   }
+  // }, [])
 
   const fadeOut = (e: any) => {
     // e.preventDefault()
     // e.returnValue = ''
-    document.body.style.opacity = '0'
+    // document.body.style.opacity = '0'
   }
 
   const location = useLocation()
@@ -109,9 +109,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   return (
     <AppStyleWrap
       id="app"
-      className={`${ln.language === 'he' ? 'dir-rtl' : ''} ${
-        !initLoadDone ? 'invisible' : ''
-      }`}
+      className={`${ln.language === 'he' ? 'dir-rtl' : ''} `}
     >
       <Support />
       <Header />
