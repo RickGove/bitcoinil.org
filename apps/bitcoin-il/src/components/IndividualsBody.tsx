@@ -6,6 +6,7 @@ import { IndividualsBodyProps } from '../utils/interfaces'
 import SiteButton from './BitcoinSiteButton'
 import CardsDisplay from './CardsDisplay'
 import CustomNavLink from './CustomNavLink'
+import { FormattedMessage } from './FormattedMessageWithHover'
 
 const IndividualsBody: React.FC<IndividualsBodyProps> = ({}) => {
   return (
@@ -13,7 +14,13 @@ const IndividualsBody: React.FC<IndividualsBodyProps> = ({}) => {
       <CardsDisplay cards={individualCards} />
       <div className="individuals-button">
         <CustomNavLink to="/getting-started">
-          <SiteButton type="primary">Get Started With BitCoin Il</SiteButton>
+          <SiteButton type="primary">
+            <FormattedMessage
+              id={`exchanges.id`}
+              defaultMessage={`Get Started With BitCoin Israel`}
+              description={`id`}
+            />
+          </SiteButton>
         </CustomNavLink>
       </div>
     </StyledIndividualsBody>
