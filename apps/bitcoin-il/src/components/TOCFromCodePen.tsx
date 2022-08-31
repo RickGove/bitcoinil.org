@@ -8,11 +8,14 @@ import { FormattedMessage } from './FormattedMessageWithHover'
  * scrollIntoView is used to ensure that when a user clicks on an item, it will smoothly scroll.
  */
 
-export interface HeadingsProps {
-  headings: any[]
+export interface HeadingsProps<T> {
+  headings: T[]
   activeId: string
 }
-const Headings: React.FC<HeadingsProps> = ({ headings, activeId }) => {
+const Headings = <T extends { id: string; title: string; items: any[] }>({
+  headings,
+  activeId
+}: HeadingsProps<T>) => {
   console.log('🇬🇧', { headings })
   return (
     <ul>
