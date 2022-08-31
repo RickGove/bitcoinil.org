@@ -82,10 +82,24 @@ export const useHeadingsData = () => {
   return { nestedHeadings }
 }
 
-export const getNestedHeadings = (headingElements: any) => {
-  const nestedHeadings = []
+interface HeadingElement {
+  heading: string | null
+  nodeName: string
+  index: number
+  id: string
+  title: { title: string; id: string }
+  innerText: {
+    title: {
+      title: string
+      id: string
+    }
+    id: string
+  }
+}
 
-  headingElements.forEach((heading, index) => {
+export const getNestedHeadings = (headingElements: HeadingElement[]) => {
+  const nestedHeadings: any[] = []
+  headingElements.forEach((heading, index: number) => {
     const { innerText: title, id } = heading
 
     if (heading.nodeName === 'H2') {
@@ -101,14 +115,17 @@ export const getNestedHeadings = (headingElements: any) => {
   return nestedHeadings
 }
 
-export const useIntersectionObserver = (setActiveId) => {
+export const useIntersectionObserver = (setActiveId: any) => {
   const headingElementsRef = React.useRef({})
   React.useEffect(() => {
-    const callback = (headings) => {
-      headingElementsRef.current = headings.reduce((map, headingElement) => {
-        map[headingElement.target.id] = headingElement
-        return map
-      }, headingElementsRef.current)
+    const callback = (headings: any) => {
+      headingElementsRef.current = headings.reduce(
+        (map: [], headingElement: HeadingElement) => {
+          map[headingElement.target.id] = headingElement
+          return map
+        },
+        headingElementsRef.current
+      )
 
       // Get all headings that are currently visible on the page
       const visibleHeadings = []
@@ -150,6 +167,7 @@ export const useIntersectionObserver = (setActiveId) => {
 /**
  * Renders the table of contents.
  */
+
 export const TableOfContents = () => {
   const [activeId, setActiveId] = React.useState()
   const { nestedHeadings } = useHeadingsData()
