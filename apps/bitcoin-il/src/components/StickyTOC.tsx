@@ -448,7 +448,7 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
 
               return (
                 <React.Fragment key={`${item.key}-${i}-subhead`}>
-                  🧱🧱🧱
+                  {/* 🧱🧱🧱 */}
                   <SubHeadings
                     i={i}
                     key={i}
@@ -498,7 +498,7 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
               // Has subheadings?
               return (
                 <p>
-                  🍄🍄🍄
+                  {/* 🍄🍄🍄🏒 */}
                   <ContentSubHeadings
                     key={`cont-sub-${i}`}
                     i={i}
