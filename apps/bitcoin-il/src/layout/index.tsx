@@ -103,6 +103,8 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
 
   React.useEffect(() => {
     location.pathname === '/developers' ? navigate('/developer') : null
+    location.pathname === '/documentation' ? navigate('/developer') : null
+
     window.scrollTo({ top: 0 })
   }, [location])
 
