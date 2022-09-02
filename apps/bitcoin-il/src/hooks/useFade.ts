@@ -13,7 +13,7 @@ export const useFade = () => {
     // el.style.opacity = '0'
     // window.setTimeout(() => {
     //   el.style.opacity = '1'
-    //   onFinish ? onFinish() : null
+    onFinish ? onFinish() : null
     // }, fadeIn + 500)
   }
 
