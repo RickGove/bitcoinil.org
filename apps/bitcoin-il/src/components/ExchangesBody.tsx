@@ -17,6 +17,8 @@ const ExchangesBody: React.FC<ExchangesBodyProps> = ({}) => {
 
   // console.log('loaded exchanges', exchanges)
 
+  console.log(exchanges)
+
   return (
     <StyledExchangesBody id="ExchangesBody">
       <div

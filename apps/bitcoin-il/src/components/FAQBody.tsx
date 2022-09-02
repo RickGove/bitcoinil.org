@@ -11,7 +11,7 @@ import StickyTOC from './StickyTOC'
 const FAQBody: React.FC<FAQBodyProps> = ({}) => {
   const faqs = useFAQs()
 
-  // console.log('faqs:', faqs)
+  console.log('faqs:', faqs)
 
   const items = React.useMemo(() => {
     const ts = Object.entries(faqs).map(([qid, { question, answer }]) => ({

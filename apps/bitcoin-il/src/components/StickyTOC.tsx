@@ -12,14 +12,13 @@ import {
 import {
   ElementToTrack,
   HTMLElementWithID,
-  tableOfContentItem,
   StickyTOCProps,
+  tableOfContentItem,
   tableOfContentSubheading
 } from '../utils/interfaces'
 import ContentSubHeadings from './ContentSubheadings'
 import { FormattedMessage } from './FormattedMessageWithHover'
 import ItemDisplay from './ItemDisplay'
-import StickyTOCBurger from './StikcyTOCBurger'
 import SubHeadings from './Subheadings'
 
 const StickyTOC: React.FC<StickyTOCProps> = ({
@@ -272,6 +271,8 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
 
   // console.log({ itemsOrganized })
 
+  // console.log(categories)
+
   const items = !itemsOrganized
     ? React.useMemo(() => {
         return Object.entries(categories).map(([key, value]) => {
@@ -422,11 +423,13 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
           {items.map((item: any, i: number) => {
             if (!item.subHeadings) {
               // Here are the headings with no submenus
+              // console.log('🦀🦀🦀 Made It Here')
               return (
                 <div
                   key={`${item.key}-${i}-mapped-left-item`}
                   className={`toc-scroll-tracked-left-item-wrap`}
                 >
+                  🦀🦀🦀
                   <span
                     // DELETE ACTIVE TOC CLASS NAme????????
                     className={`toc-scroll-tracked-left-item-without-subheadings left-title ${
@@ -445,7 +448,7 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
 
               return (
                 <React.Fragment key={`${item.key}-${i}-subhead`}>
-                  {/* 🧱🧱🧱 */}
+                  🧱🧱🧱
                   <SubHeadings
                     i={i}
                     key={i}
@@ -472,10 +475,11 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
           {items.map((item: any, i: any) => {
             if (!item.subHeadings) {
               // no subheadings
-              // console.log('🇵🇱', item.bodyWithoutSubheadings)
+              console.log('🇬🇧🇬🇧🇬🇧', item.bodyWithoutSubheadings)
 
               return (
                 <React.Fragment key={`no-sub-${i}`}>
+                  🇬🇧🇬🇧🇬🇧
                   <span
                     id={item.key}
                     ref={(ref) => handleRef(ref, false, item)}
@@ -483,7 +487,6 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
                   >
                     {item.categoryHeading}
                   </span>
-
                   {item.bodyWithoutSubheadings &&
                     item.bodyWithoutSubheadings[0] &&
                     item.bodyWithoutSubheadings[0].body && (
@@ -492,13 +495,17 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
                 </React.Fragment>
               )
             } else {
+              // Has subheadings?
               return (
-                <ContentSubHeadings
-                  key={`cont-sub-${i}`}
-                  i={i}
-                  item={item}
-                  handleRef={handleRef}
-                />
+                <p>
+                  🍄🍄🍄
+                  <ContentSubHeadings
+                    key={`cont-sub-${i}`}
+                    i={i}
+                    item={item}
+                    handleRef={handleRef}
+                  />
+                </p>
               )
             }
           })}

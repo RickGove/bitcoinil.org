@@ -3,11 +3,11 @@
 		"scope": "javascript,typescript,typescriptreact",
 		"prefix": "mtfm",
 		"body": [
-			"const intl = useIntl()",
+			// "const intl = useIntl()",
 			"<FormattedMessage",
-			"id={`you-should-know.table.$1`}",
+			"id={`developers.$1`}",
 			"defaultMessage={`$TM_SELECTED_TEXT`}",
-			"description={`youshouldknow.desc`}",
+			"description={`developers.desc`}",
 			"/>",
 		],
 		"description": "Log output to console"

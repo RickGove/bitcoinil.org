@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import { ContentSubheadingsProps } from '../utils/interfaces'
+import SubHeadings from './Subheadings'
 
 const ContentSubHeadings: React.FC<ContentSubheadingsProps> = ({
   i,
@@ -20,12 +21,14 @@ const ContentSubHeadings: React.FC<ContentSubheadingsProps> = ({
           ref={(ref) => handleRef(ref, false, item)}
           className="accented-title toc-scroll-tracked-right-item-heading-has-subheadings right-title submenu-title span-display-block margin-bottom-span"
         >
+          🏒🏒🏒
           {item.categoryHeading}
           {/* 🦀 */}
         </span>
       </div>
       <div className="toc-scroll-tracked-right-item-heading-has-subheadings-subheadings-wrap">
         {item.subHeadings?.map((subItem, i) => {
+          console.log(subItem.subHeadings)
           return (
             <React.Fragment key={i}>
               <span
@@ -33,11 +36,27 @@ const ContentSubHeadings: React.FC<ContentSubheadingsProps> = ({
                 ref={(ref) => handleRef(ref, false, subItem, item.key)}
                 className="toc-scroll-tracked-right-item-heading-has-subheadings-subheadings-wrap-title right-title span-display-block"
                 style={{ display: 'block' }}
-              ></span>
+              >
+                🚨🚨🚨
+              </span>
               <span className="toc-scroll-tracked-right-item-heading-has-subheadings-subheadings-wrap-body right-subtitle">
                 {subItem.body ? (
                   <>
+                    💂💂💂
                     <subItem.body />
+                    {subItem.hasSubheadings
+                      ? subItem.subHeadings?.map((subHead, ii) => {
+                          console.log('🇩🇪', subHead)
+                          return (
+                            <React.Fragment>
+                              <p>👻👻👻{subHead.categoryHeading}</p>
+                              <p>
+                                🌞🌞🌞{subHead.body ? subHead.body() : null}
+                              </p>
+                            </React.Fragment>
+                          )
+                        })
+                      : null}
                   </>
                 ) : subItem.hasSubheadings ? (
                   <ContentSubHeadings
