@@ -23,7 +23,7 @@ const SubHeadings: React.FC<SubHeadingProps> = ({
       key={`subhead-${i}`}
       className="toc-scroll-tracked-left-has-subheadings submenu-title"
     >
-      {/* 👽️👽️👽️ */}
+      👽️👽️👽️
       <span
         className={`toc-scroll-tracked-left-has-subheadings-heading left-title flex-displayed-item ${
           item.key === elInView ? 'active-toc-item' : ''
@@ -37,7 +37,7 @@ const SubHeadings: React.FC<SubHeadingProps> = ({
         }}
         // key={i}
       >
-        {/* 🏈 */}
+        🏈
         {item.categoryHeading}
         {/* {item.hasSubheadings ? (
           <img

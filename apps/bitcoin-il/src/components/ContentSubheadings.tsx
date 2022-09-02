@@ -21,14 +21,14 @@ const ContentSubHeadings: React.FC<ContentSubheadingsProps> = ({
           ref={(ref) => handleRef(ref, false, item)}
           className="accented-title toc-scroll-tracked-right-item-heading-has-subheadings right-title submenu-title span-display-block margin-bottom-span"
         >
-          {/* 🏒🏒🏒 */}
+          🏒🏒🏒
           {item.categoryHeading}
           {/* 🦀 */}
         </span>
       </div>
       <div className="toc-scroll-tracked-right-item-heading-has-subheadings-subheadings-wrap">
         {item.subHeadings?.map((subItem, i) => {
-          // console.log(subItem.subHeadings)
+          console.log(subItem.subHeadings)
           return (
             <React.Fragment key={i}>
               <span
@@ -37,25 +37,21 @@ const ContentSubHeadings: React.FC<ContentSubheadingsProps> = ({
                 className="toc-scroll-tracked-right-item-heading-has-subheadings-subheadings-wrap-title right-title span-display-block"
                 style={{ display: 'block' }}
               >
-                {/* 🚨🚨🚨 */}
+                🚨🚨🚨
               </span>
               <span className="toc-scroll-tracked-right-item-heading-has-subheadings-subheadings-wrap-body right-subtitle">
                 {subItem.body ? (
                   <>
-                    {/* 💂💂💂 */}
+                    💂💂💂
                     <subItem.body />
                     {subItem.hasSubheadings
                       ? subItem.subHeadings?.map((subHead, ii) => {
-                          // console.log('🇩🇪', subHead)
+                          console.log('🇩🇪', subHead)
                           return (
                             <React.Fragment>
+                              <p>👻👻👻{subHead.categoryHeading}</p>
                               <p>
-                                {/* 👻👻👻 */}
-                                {subHead.categoryHeading}
-                              </p>
-                              <p>
-                                {/* 🌞🌞🌞 */}
-                                {subHead.body ? subHead.body() : null}
+                                🌞🌞🌞{subHead.body ? subHead.body() : null}
                               </p>
                             </React.Fragment>
                           )
