@@ -146,7 +146,7 @@ export const devItems: tableOfContentItem[] = [
             body: () => (
               <>
                 <section>
-                  <h3 id="wallet-binaries">
+                  <h3 className="sub-sub-title-toc" id="wallet-binaries">
                     <FormattedMessage
                       id={`developers.binaries`}
                       defaultMessage={`Wallet Binaries`}
@@ -187,7 +187,7 @@ export const devItems: tableOfContentItem[] = [
                     </a>
                   </p>
 
-                  <h3 id="installation-guides">
+                  <h3 className="sub-sub-title-toc" id="installation-guides">
                     <FormattedMessage
                       id={`developers.install-guides`}
                       defaultMessage={`Installation Guides`}

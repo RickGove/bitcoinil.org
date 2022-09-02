@@ -273,18 +273,18 @@ const TheTOCExport = ({ items }) => {
         <main>
           {/* {JSON.stringify(items)} */}
           {generatedItems.map((item, i) => {
-            console.log('🧱🧱🧱', item)
+            // console.log('🧱🧱🧱', item)
             return (
               <React.Fragment>
                 <h2 id={item.key}>{item.categoryHeading}</h2>
                 {/* <p>{DummyText}</p> */}
                 {item.subHeadings?.map((subIt, i) => {
-                  console.log('🥩🥩🥩', subIt)
+                  // console.log('🥩🥩🥩', subIt)
                   return (
                     <React.Fragment>
                       <h3 id={subIt.key}>{subIt.categoryHeading}</h3>
                       {subIt.subHeadings?.map((subSubIt) => {
-                        console.log('💻️💻️💻️', { subSubIt })
+                        // console.log('💻️💻️💻️', { subSubIt })
                         return (
                           <p id={subSubIt.key}>{subSubIt.categoryHeading}</p>
                         )

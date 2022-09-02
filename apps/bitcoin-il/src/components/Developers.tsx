@@ -26,7 +26,8 @@ export default Developers
 
 const StyledDevelopers = styled.div`
   .padded-heading-1 {
-    padding: 200px;
+    /* padding: 200px; */
+    padding: 200px 200px 20px 200px;
     text-align: center;
     ${phoneDevices} {
       padding: 30px;

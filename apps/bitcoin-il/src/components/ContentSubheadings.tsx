@@ -1,7 +1,7 @@
+import { Divider } from 'antd'
 import * as React from 'react'
 
 import { ContentSubheadingsProps } from '../utils/interfaces'
-import SubHeadings from './Subheadings'
 
 const ContentSubHeadings: React.FC<ContentSubheadingsProps> = ({
   i,
@@ -15,20 +15,20 @@ const ContentSubHeadings: React.FC<ContentSubheadingsProps> = ({
 
   return (
     <React.Fragment key={i}>
-      <div className="margin-bottom-wrap">
+      {i !== 0 ? <Divider /> : null}
+      <span className="margin-bottom-wrap main-title-toc">
         <span
           id={item.key}
           ref={(ref) => handleRef(ref, false, item)}
           className="accented-title toc-scroll-tracked-right-item-heading-has-subheadings right-title submenu-title span-display-block margin-bottom-span"
         >
-          🏒🏒🏒
           {item.categoryHeading}
           {/* 🦀 */}
         </span>
-      </div>
-      <div className="toc-scroll-tracked-right-item-heading-has-subheadings-subheadings-wrap">
+      </span>
+      <span className="toc-scroll-tracked-right-item-heading-has-subheadings-subheadings-wrap">
         {item.subHeadings?.map((subItem, i) => {
-          console.log(subItem.subHeadings)
+          // console.log(subItem.subHeadings)
           return (
             <React.Fragment key={i}>
               <span
@@ -37,21 +37,25 @@ const ContentSubHeadings: React.FC<ContentSubheadingsProps> = ({
                 className="toc-scroll-tracked-right-item-heading-has-subheadings-subheadings-wrap-title right-title span-display-block"
                 style={{ display: 'block' }}
               >
-                🚨🚨🚨
+                {/* 🚨🚨🚨 */}
               </span>
               <span className="toc-scroll-tracked-right-item-heading-has-subheadings-subheadings-wrap-body right-subtitle">
                 {subItem.body ? (
                   <>
-                    💂💂💂
+                    {/* 💂💂💂 */}
                     <subItem.body />
                     {subItem.hasSubheadings
                       ? subItem.subHeadings?.map((subHead, ii) => {
-                          console.log('🇩🇪', subHead)
+                          // console.log('🧮', subHead)
                           return (
-                            <React.Fragment>
-                              <p>👻👻👻{subHead.categoryHeading}</p>
-                              <p>
-                                🌞🌞🌞{subHead.body ? subHead.body() : null}
+                            <React.Fragment key={`subsub-${ii}`}>
+                              <p className="subheading-title">
+                                {/* 👻👻👻 */}
+                                {subHead.categoryHeading}
+                              </p>
+                              <p className="double-indent-toc">
+                                {/* 🌞🌞🌞 */}
+                                {subHead.body ? subHead.body() : null}
                               </p>
                             </React.Fragment>
                           )
@@ -72,7 +76,7 @@ const ContentSubHeadings: React.FC<ContentSubheadingsProps> = ({
             </React.Fragment>
           )
         })}
-      </div>
+      </span>
     </React.Fragment>
   )
 }

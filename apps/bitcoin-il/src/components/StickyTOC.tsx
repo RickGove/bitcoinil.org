@@ -281,7 +281,7 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
           const output = {
             categoryHeading: (
               <FormattedMessage
-                key={key}
+                key={`${Math.random()}-key`}
                 id={`exchanges.config.${key}`}
                 defaultMessage={`exchanges.config.${key}`}
               />
@@ -293,7 +293,7 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
               const suboutput = {
                 categoryHeading: (
                   <FormattedMessage
-                    key={`fm-sh-${subkey}`}
+                    key={`fm-sh-${subkey}-${Math.random()}`}
                     id={`exchanges.config.${subkey}`}
                     defaultMessage={`exchanges.config.${subkey}`}
                   />
@@ -337,11 +337,19 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
                             description={subsubvalue.description}
                             url={subsubvalue.url}
                             logo={subsubvalue.logo}
-                            key={`${subsubvalue.name}-body-comp`}
+                            key={`${
+                              subsubvalue.name
+                            }-body-comp-${Math.random()}`}
                           />
                         )
                       } else {
-                        return <>Missing SubSubValue</>
+                        return (
+                          <React.Fragment
+                            key={`${Math.random()}-key-miss-subs`}
+                          >
+                            Missing SubSubValue
+                          </React.Fragment>
+                        )
                       }
                       // subsubvalue ?return (
                       //   <ItemDisplay
@@ -426,7 +434,7 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
               // console.log('🦀🦀🦀 Made It Here')
               return (
                 <div
-                  key={`${item.key}-${i}-mapped-left-item`}
+                  key={`${item.key}-${i}-mapped-left-item-${Math.random()}`}
                   className={`toc-scroll-tracked-left-item-wrap`}
                 >
                   🦀🦀🦀
@@ -447,8 +455,10 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
               // Here are the heading with submenus
 
               return (
-                <React.Fragment key={`${item.key}-${i}-subhead`}>
-                  🧱🧱🧱
+                <React.Fragment
+                  key={`${item.key}-${i}-subhead-${Math.random()}`}
+                >
+                  {/* 🧱🧱🧱 */}
                   <SubHeadings
                     i={i}
                     key={i}
@@ -475,11 +485,11 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
           {items.map((item: any, i: any) => {
             if (!item.subHeadings) {
               // no subheadings
-              console.log('🇬🇧🇬🇧🇬🇧', item.bodyWithoutSubheadings)
+              // console.log('🇬🇧🇬🇧🇬🇧', item.bodyWithoutSubheadings)
 
               return (
-                <React.Fragment key={`no-sub-${i}`}>
-                  🇬🇧🇬🇧🇬🇧
+                <React.Fragment key={`no-sub-${i}-${Math.random()}`}>
+                  {/* 🇬🇧🇬🇧🇬🇧 */}
                   <span
                     id={item.key}
                     ref={(ref) => handleRef(ref, false, item)}
@@ -498,9 +508,8 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
               // Has subheadings?
               return (
                 <p>
-                  🍄🍄🍄
                   <ContentSubHeadings
-                    key={`cont-sub-${i}`}
+                    key={`cont-sub-${i}-${Math.random()}`}
                     i={i}
                     item={item}
                     handleRef={handleRef}
@@ -765,5 +774,48 @@ const StyledTableOfContentsScrollTracked = styled.div`
 
   .toc-scroll-tracked-left-item-wrap {
     /* background: dodgerblue; */
+  }
+
+  .subheading-title {
+    /* background: blue; */
+    color: ${colors.accent};
+    padding-left: 15px;
+    margin: 15px 0;
+    font-size: 20px;
+  }
+
+  .main-title-toc {
+    span {
+      font-size: 28px;
+    }
+  }
+
+  .double-indent-toc {
+    padding-left: 25px;
+  }
+
+  table {
+    /* background: dodgerblue; */
+    font-size: 16px;
+    thead {
+      th {
+        padding: 0 5px;
+        border: 1px solid var(--text-color-secondary);
+      }
+    }
+
+    tbody {
+      td {
+        border: 1px solid var(--text-color-secondary);
+        padding: 5px;
+      }
+    }
+  }
+
+  .sub-sub-title-toc {
+    margin-top: 10px;
+    color: ${colors.accent};
+    font-weight: 900;
+    font-size: 21px;
   }
 `
