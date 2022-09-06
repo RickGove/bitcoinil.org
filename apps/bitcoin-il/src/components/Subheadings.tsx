@@ -16,7 +16,7 @@ const SubHeadings: React.FC<SubHeadingProps> = ({
 }): JSX.Element => {
   // console.log('🥩🥩🥩 This is a subheading', item.key === 'vindax' ? item : '')
   // console.log(elInView, item.key)
-  // console.log(elInView === item.key)
+  // console.log(elInVadsiew === item.key)
 
   return (
     <StyledSubHeadings
@@ -64,12 +64,12 @@ const SubHeadings: React.FC<SubHeadingProps> = ({
                 scrollToRightSideElement(subItem.key)
               }}
             >
-              {/* 👻👻👻 */}
               <div
                 className={`country-header-item ${
                   subItem.key === elInView ? 'active-toc-item' : ''
                 }`}
               >
+                {/* 👻👻👻 */}
                 {subItem.categoryHeading}
               </div>
               {subItem.hasSubheadings &&

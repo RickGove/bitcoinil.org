@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { colors } from '../theme/colors'
 import { flashElement, scrollToElement } from '../util/util'
 import {
+  largeDevices,
   phoneDevices,
   TOCBreakPointMobile,
   TOCBreakPointMobileHeight,
@@ -45,20 +46,20 @@ const StickyTOC: React.FC<StickyTOCProps> = ({
 
   // console.log('🦀', { categories })
 
-  React.useEffect(() => {
-    // console.log('😂 New IsStuck')
-    // console.log({ isBelowZero, isAtEnd, isAtStart, isAtEndMobile })
-    // console.log({ isStuck })
-    // leftHandColumnRef?.current?.style.opacity = 0
-    // leftHandColumnRef && leftHandColumnRef.current
-    //   ? (leftHandColumnRef.current.style.opacity = 0)
-    //   : null
-    // leftHandColumnRef?.current?.style.opacity = 0
-  }, [isStuck])
+  // React.useEffect(() => {
+  //   // console.log('😂 New IsStuck')
+  //   // console.log({ isBelowZero, isAtEnd, isAtStart, isAtEndMobile })
+  //   // console.log({ isStuck })
+  //   // leftHandColumnRef?.current?.style.opacity = 0
+  //   // leftHandColumnRef && leftHandColumnRef.current
+  //   //   ? (leftHandColumnRef.current.style.opacity = 0)
+  //   //   : null
+  //   // leftHandColumnRef?.current?.style.opacity = 0
+  // }, [isStuck])
 
-  React.useEffect(() => {
-    // console.log({ isAtEnd, isAtEndMobile })
-  }, [isAtEnd, isAtEndMobile])
+  // React.useEffect(() => {
+  //   // console.log({ isAtEnd, isAtEndMobile })
+  // }, [isAtEnd, isAtEndMobile])
 
   React.useEffect(() => {
     if (leftHandColumnRef?.current?.clientWidth)
@@ -817,5 +818,21 @@ const StyledTableOfContentsScrollTracked = styled.div`
     color: ${colors.accent};
     font-weight: 900;
     font-size: 21px;
+  }
+
+  .hide-on-non-mobile {
+    ${largeDevices} {
+      display: none;
+    }
+  }
+
+  .hide-always {
+    display: none;
+  }
+
+  .hide-on-mobile {
+    ${phoneDevices} {
+      display: none;
+    }
   }
 `

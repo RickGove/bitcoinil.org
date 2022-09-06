@@ -229,6 +229,7 @@ export interface LogoProps {
 export interface tableOfContentItem {
   categoryHeading: JSX.Element
   hasSubheadings: boolean
+  mobileBody?: () => JSX.Element
   body?: () => JSX.Element
   subHeadings?: tableOfContentItem[]
   key: string

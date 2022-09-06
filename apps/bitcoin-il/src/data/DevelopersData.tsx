@@ -230,6 +230,22 @@ export const devItems: tableOfContentItem[] = [
               </>
             ),
             hasSubheadings: false,
+            mobileBody: () => (
+              <ul>
+                <li>
+                  <a href="https://btcilpool.com/">btcilpool.com</a>
+                </li>
+                <li>
+                  <a href="https://multipoolil.com/">multipoolil.com</a>
+                </li>
+                <li>
+                  <a href="https://pool.btcil.co.il/">pool.btcil.co.il</a>
+                </li>
+                <li>
+                  <a href="http://bitcoinilpool.com/">bitcoinilpool</a>
+                </li>
+              </ul>
+            ),
             body: () => (
               <>
                 <table>

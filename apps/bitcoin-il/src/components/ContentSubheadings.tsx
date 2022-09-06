@@ -53,7 +53,20 @@ const ContentSubHeadings: React.FC<ContentSubheadingsProps> = ({
                                 {/* 👻👻👻 */}
                                 {subHead.categoryHeading}
                               </p>
-                              <p className="double-indent-toc">
+                              <p
+                                className={`double-indent-toc hide-on-non-mobile ${
+                                  !subHead.mobileBody ? 'hide-always' : ''
+                                }`}
+                              >
+                                {subHead.mobileBody
+                                  ? subHead.mobileBody()
+                                  : null}
+                              </p>
+                              <p
+                                className={`double-indent-toc ${
+                                  subHead.mobileBody ? 'hide-on-mobile' : ''
+                                }`}
+                              >
                                 {/* 🌞🌞🌞 */}
                                 {subHead.body ? subHead.body() : null}
                               </p>

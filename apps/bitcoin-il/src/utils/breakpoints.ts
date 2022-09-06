@@ -4,7 +4,7 @@ const smallDevices: string = `@media only screen and (min-width: 600px)`
 
 const tabletDevices: string = `@media only screen and (min-width: 768px)`
 
-const largeDevices: string = `@media only screen and (min-width: 992px)`
+const largeDevices: string = `@media only screen and (min-width: 950px)`
 
 const extraLargeDevices: string = `@media only screen and (min-width: 1200px)`
 
